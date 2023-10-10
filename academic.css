@@ -1,0 +1,108 @@
+/* Common styles for both desktop and mobile */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th,
+td {
+    border: 1px solid #bcbcbc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Apply styles to the navigation bar */
+nav {
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 0;
+    background: linear-gradient(-45deg, #ea1708, #05f93a, #0b9dec);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    /* Change the background color as constantly */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    /* Center-align the links */
+    position: fixed;
+    /* Fixed position so it stays at the top */
+    top: 0;
+    /* Stick it to the top of the viewport */
+    left: 0;
+    right: 0;
+    z-index: 999;
+    /* Ensure it's above other content */
+}
+
+/* Animation of gradient */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Style the navigation links */
+nav a {
+    color: white;
+    /* Link text color */
+    text-decoration: none;
+    /* Remove underlines from links */
+    margin: 0 15px;
+    /* Adjust the spacing between links */
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
+}
+
+/* Change link color on hover */
+nav a:hover {
+    color: #333;
+    /* Change the color on hover as desired */
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles for mobile screens */
+@media screen and (max-width: 768px) {
+
+    /* Add your mobile-specific styles here */
+    table {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+    nav {
+        font-size: 16px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .button-link {
+        padding: 8px 16px;
+    }
+}
